@@ -14,3 +14,8 @@ print "\nRead all values from hash\n\n";
 while ( my ($key, $value) = each %hash1 ) {
     print "$key - $value\n";
 }
+
+#Reading all values in fixed order of keys
+my @key = keys %hash1;
+my @value = @hash1{@key};
+print "$_\n" for @value;
